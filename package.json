@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "@slack/client": "^3.10.0",
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "rivescript": "^1.17.2"
   }
 }

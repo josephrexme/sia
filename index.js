@@ -1,17 +1,19 @@
 const dotenv = require('dotenv').config();
+const Rivescript = require('rivescript');
 const RtmClient = require('@slack/client').RtmClient;
 const RTM_EVENTS = require('@slack/client').RTM_EVENTS;
 const CLIENT_EVENTS = require('@slack/client').CLIENT_EVENTS;
 
-const bot_token = process.env.SLACK_BOT_TOKEN || '';
+const token = process.env.SLACK_BOT_TOKEN || '';
 
-const rtm = new RtmClient(bot_token);
+const rs = new Rivescript();
+const rtm = new RtmClient(token);
 
 let channel;
 
 rtm.on(CLIENT_EVENTS.RTM.AUTHENTICATED, (rtmStartData) => {
   for(const c of rtmStartData.channels){
-    if(c.is_member && c.name === 'general') { channel = c.id }
+    if(c.is_member && c.name === 'newbot-test') { channel = c.id }
   }
   console.log(`Logged in as ${rtmStartData.self.name} of ${rtmStartData.team.name}, but not connected to channel yet`);
 });
@@ -24,9 +26,14 @@ rtm.on(CLIENT_EVENTS)
 
 rtm.start();
 
-rtm.on(RTM_EVENTS.MESSAGE, (message) => {
-  // console.log('messages', message);
-  if(message.text === '!about'){
-    rtm.sendMessage('I am a bot and was made by Joseph Rex', channel);
-  }
+rs.loadDirectory('./brain', () => {
+  rs.sortReplies();
+  rtm.on(RTM_EVENTS.MESSAGE, (message) => {
+    // if(message.text === '!about'){
+    //   rtm.sendMessage('I am a bot and was made by Joseph Rex', channel);
+    // }
+    let reply = rs.reply('Joseph', message.text);
+    console.log(reply);
+    rtm.sendMessage(reply);
+  });
 });

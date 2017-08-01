@@ -163,6 +163,10 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
+fs-readdir-recursive@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/fs-readdir-recursive/-/fs-readdir-recursive-1.0.0.tgz#8cd1745c8b4f8a29c8caec392476921ba195f560"
+
 getpass@^0.1.1:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/getpass/-/getpass-0.1.7.tgz#5eff8e3e684d569ae4cb2b1282604e8ba62149fa"
@@ -324,6 +328,17 @@ request@^2.64.0:
 retry@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/retry/-/retry-0.9.0.tgz#6f697e50a0e4ddc8c8f7fb547a9b60dead43678d"
+
+rivescript@^1.17.2:
+  version "1.17.2"
+  resolved "https://registry.yarnpkg.com/rivescript/-/rivescript-1.17.2.tgz#1e42f020413be9be8a78546f2642be8965b096ce"
+  dependencies:
+    fs-readdir-recursive "^1.0.0"
+    rsvp "^3.1.0"
+
+rsvp@^3.1.0:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-3.6.2.tgz#2e96491599a96cde1b515d5674a8f7a91452926a"
 
 safe-buffer@^5.0.1:
   version "5.1.1"
