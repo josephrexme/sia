@@ -32,6 +32,7 @@ rs.loadDirectory('./brain', () => {
     // if(message.text === '!about'){
     //   rtm.sendMessage('I am a bot and was made by Joseph Rex', channel);
     // }
+    console.log(message);
     let reply = rs.reply('Joseph', message.text);
     console.log(reply);
     rtm.sendMessage(reply);
