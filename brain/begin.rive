@@ -6,7 +6,7 @@
 < begin
 
 // The Botmaster's Name
-! var master = localuser
+! var master = Joseph Rex
 
 // Bot Variables
 ! var name     = Anton
