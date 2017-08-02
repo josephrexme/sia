@@ -1,5 +1,5 @@
-# Anton
-Anton is a shadow of me. Anton runs as a bot under my user in Slack teams to provide some fast feedbacks. Made with [Node-Slack-SDK][1]
+# Sia
+Sia (Sentient Intelligent Autobot) is a bot for slack. Sia uses template based intelligency through [rivescript][1] and was made with [Node-Slack-SDK][2]
 
-
-[1]: https://github.com/slackapi/node-slack-sdk
+[1]: https://www.rivescript.com
+[2]: https://github.com/slackapi/node-slack-sdk

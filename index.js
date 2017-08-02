@@ -9,6 +9,12 @@ const token = process.env.SLACK_BOT_TOKEN || '';
 const rs = new Rivescript();
 const rtm = new RtmClient(token);
 
+const respond = (command) => (
+  {
+    welcome: 'Welcome to the team. Feel free to check out the channels'
+  }[command]
+);
+
 let channel;
 
 rtm.on(CLIENT_EVENTS.RTM.AUTHENTICATED, (rtmStartData) => {
@@ -19,7 +25,8 @@ rtm.on(CLIENT_EVENTS.RTM.AUTHENTICATED, (rtmStartData) => {
 });
 
 rtm.on(CLIENT_EVENTS.RTM.RTM_CONNECTION_OPENED, () => {
-  rtm.sendMessage('Hello! I am a sentient droid', channel);
+  console.log('Connection opened');
+  // rtm.sendMessage('Hello! I am a sentient droid', channel);
 });
 
 rtm.on(CLIENT_EVENTS)
@@ -29,12 +36,16 @@ rtm.start();
 rs.loadDirectory('./brain', () => {
   rs.sortReplies();
   rtm.on(RTM_EVENTS.MESSAGE, (message) => {
-    // if(message.text === '!about'){
-    //   rtm.sendMessage('I am a bot and was made by Joseph Rex', channel);
-    // }
     console.log(message);
-    let reply = rs.reply('Joseph', message.text);
-    console.log(reply);
-    rtm.sendMessage(reply);
+    const commandPrefix = '`';
+    const commands = ['welcome', 'yt', 'wild west wednesday'];
+    const firstword = message.text.slice(1).split(' ')[0];
+    const reply = rs.reply('Joseph', message.text.slice(1));
+    console.log(firstword, commands.indexOf(firstword));
+    if(message.text.slice(0, 1) === commandPrefix && commands.indexOf(firstword) === -1){
+      rtm.sendMessage(reply, channel);
+    } else if(commands.indexOf(firstword) !== -1){
+      rtm.sendMessage(respond(firstword), message.channel || channel);
+    }
   });
 });
