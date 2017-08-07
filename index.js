@@ -31,10 +31,13 @@ rtm.start();
 rs.loadDirectory('./brain', () => {
   rs.sortReplies();
   rtm.on(RTM_EVENTS.MESSAGE, (message) => {
+    console.log('Message', message);
     const commandPrefix = '`';
-    const reply = rs.reply('Joseph', message.text.slice(1));
-    if(message.text.slice(0, 1) === commandPrefix){
-      rtm.sendMessage(reply, channel);
+    if(message.text){
+      const reply = rs.reply('Joseph', message.text.slice(1));
+      if(message.text.slice(0, 1) === commandPrefix){
+        rtm.sendMessage(reply, message.channel);
+      }
     }
   });
 });
