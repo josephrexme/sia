@@ -37,14 +37,17 @@ rs.loadDirectory('./brain', () => {
     if(message.text && message.text.length){
       const nameMatch = /(^|(\s|@))(sia)/i.test(message.text);
       if(message.text.slice(0, 1) === commandPrefix){
+        // Take out the command prefix
         const filteredText = message.text.slice(1);
-        const code = filteredText.split(' ')[0];
-        if(Object.keys(repl).indexOf(code) == -1){
-          console.log(Object.keys(repl).indexOf(code), code, 'rive');
+        // Take the code ignoring first word as command
+        const code = filteredText.slice(filteredText.indexOf(' ') + 1);
+        // Assume first word is language being passed to repl
+        const lang = filteredText.split(' ')[0];
+        if(Object.keys(repl).indexOf(lang) === -1){
           const reply = rs.reply(message.user, filteredText);
           rtm.sendMessage(reply, message.channel);
         }else{
-          console.log('repl');
+          console.log('repl', code);
           rtm.sendMessage(repl.js(code), message.channel);
         }
       }else if(nameMatch){
