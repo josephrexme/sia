@@ -40,9 +40,11 @@ rs.loadDirectory('./brain', () => {
         const filteredText = message.text.slice(1);
         const code = filteredText.split(' ')[0];
         if(Object.keys(repl).indexOf(code) == -1){
+          console.log(Object.keys(repl).indexOf(code), code, 'rive');
           const reply = rs.reply(message.user, filteredText);
           rtm.sendMessage(reply, message.channel);
         }else{
+          console.log('repl');
           rtm.sendMessage(repl.js(code), message.channel);
         }
       }else if(nameMatch){
