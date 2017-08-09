@@ -3,6 +3,7 @@ const Rivescript = require('rivescript');
 const RtmClient = require('@slack/client').RtmClient;
 const RTM_EVENTS = require('@slack/client').RTM_EVENTS;
 const CLIENT_EVENTS = require('@slack/client').CLIENT_EVENTS;
+const repl = require('./repl');
 
 const token = process.env.SLACK_BOT_TOKEN || '';
 const defaultChannel = process.env.DEFAULT_CHANNEL || 'general';
@@ -36,10 +37,15 @@ rs.loadDirectory('./brain', () => {
     if(message.text && message.text.length){
       const nameMatch = /(^|(\s|@))(sia)/i.test(message.text);
       if(message.text.slice(0, 1) === commandPrefix){
-        const reply = rs.reply(message.user, message.text.slice(1));
-        rtm.sendMessage(reply, message.channel);
+        const filteredText = message.text.slice(1);
+        const code = filteredText.split(' ')[0];
+        if(Object.keys(repl).indexOf(code) == -1){
+          const reply = rs.reply(message.user, filteredText);
+          rtm.sendMessage(reply, message.channel);
+        }else{
+          rtm.sendMessage(repl.js(code), message.channel);
+        }
       }else if(nameMatch){
-        console.log(message.text, nameMatch);
         const reply = rs.reply(message.user, message.text.replace(/sia/i, ''));
         rtm.sendMessage(reply, message.channel);
       }

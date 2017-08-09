@@ -11,12 +11,6 @@
   rs.setUservar(uid, name, value);
 < object
 
-> object evaluate javascript
-  const {VM} = require('vm2');
-  const vm = new VM();
-  return args[0];
-< object
-
 > object add javascript
   // Demonstrats that JS objects can return numbers.
   var a = args[0];
@@ -29,6 +23,3 @@
 
 + javascript set * to *
 - Set user variable <star1> to <star2>.<call>setvar <star1> <star2></call>
-
-+ js *
-- <call>evaluate <star1></call>
