@@ -33,9 +33,14 @@ rs.loadDirectory('./brain', () => {
   rtm.on(RTM_EVENTS.MESSAGE, (message) => {
     console.log('Message', message);
     const commandPrefix = '`';
-    if(message.text){
-      const reply = rs.reply('Joseph', message.text.slice(1));
+    if(message.text && message.text.length){
+      const nameMatch = /(^|(\s|@))(sia)/i.test(message.text);
       if(message.text.slice(0, 1) === commandPrefix){
+        const reply = rs.reply(message.user, message.text.slice(1));
+        rtm.sendMessage(reply, message.channel);
+      }else if(nameMatch){
+        console.log(message.text, nameMatch);
+        const reply = rs.reply(message.user, message.text.replace(/sia/i, ''));
         rtm.sendMessage(reply, message.channel);
       }
     }
