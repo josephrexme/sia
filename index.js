@@ -3,7 +3,8 @@ const Rivescript = require('rivescript');
 const RtmClient = require('@slack/client').RtmClient;
 const RTM_EVENTS = require('@slack/client').RTM_EVENTS;
 const CLIENT_EVENTS = require('@slack/client').CLIENT_EVENTS;
-const repl = require('./repl');
+const repl = require('./lib/repl')
+const math = require('./lib/math')
 
 const token = process.env.SLACK_BOT_TOKEN || '';
 const defaultChannel = process.env.DEFAULT_CHANNEL || 'general';
@@ -44,8 +45,12 @@ rs.loadDirectory('./brain', () => {
         // Assume first word is language being passed to repl
         const lang = filteredText.split(' ')[0];
         if(Object.keys(repl).indexOf(lang) === -1){
-          const reply = rs.reply(message.user, filteredText);
-          rtm.sendMessage(reply, message.channel);
+          if(lang == 'math'){
+            rtm.sendMessage(math(code), message.channel)
+          }else{
+            const reply = rs.reply(message.user, filteredText);
+            rtm.sendMessage(reply, message.channel);
+          }
         }else{
           console.log('repl', code);
           rtm.sendMessage(repl.js(code), message.channel);
