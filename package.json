@@ -6,7 +6,6 @@
   "dependencies": {
     "@slack/client": "^3.10.0",
     "dotenv": "^4.0.0",
-    "mathjs": "^3.16.3",
     "rivescript": "^1.17.2",
     "vm2": "^3.4.6"
   },
