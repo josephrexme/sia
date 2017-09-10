@@ -28,6 +28,23 @@ rtm.on(CLIENT_EVENTS)
 
 rtm.start()
 
+const reply_commands = (message) => {
+  // Take out the command prefix
+  const filteredText = message.text.slice(1)
+  // Take the code ignoring first word as command
+  const code = filteredText.slice(filteredText.indexOf(' ') + 1)
+  // Assume first word is language being passed to repl
+  const lang = filteredText.split(' ')[0]
+  // If language exists among available repl languages process repl
+  if(Object.keys(repl).indexOf(lang) === -1){
+    const reply = rs.reply(message.user, filteredText)
+    rtm.sendMessage(reply, message.channel)
+  }else{
+    console.log('repl', code);
+    rtm.sendMessage(repl[lang](code), message.channel)
+  }
+}
+
 rs.loadDirectory('./brain', () => {
   rs.sortReplies()
   rtm.on(RTM_EVENTS.MESSAGE, (message) => {
@@ -36,24 +53,11 @@ rs.loadDirectory('./brain', () => {
     if(message.text && message.text.length){
       const nameMatch = /(^|(\s|@))(sia)/i.test(message.text)
       if(message.text.slice(0, 1) === commandPrefix){ // Answer command prefix messages
-        // Take out the command prefix
-        const filteredText = message.text.slice(1)
-        // Take the code ignoring first word as command
-        const code = filteredText.slice(filteredText.indexOf(' ') + 1)
-        // Assume first word is language being passed to repl
-        const lang = filteredText.split(' ')[0]
-        // If language exists among available repl languages process repl
-        if(Object.keys(repl).indexOf(lang) === -1){
-          const reply = rs.reply(message.user, filteredText)
-          rtm.sendMessage(reply, message.channel)
-        }else{
-          console.log('repl', code);
-          rtm.sendMessage(repl.js(code), message.channel)
-        }
+        reply_commands(message)
       }else if(nameMatch){ // Answer name mentions
         const reply = rs.reply(message.user, message.text.replace(/sia/i, ''))
         rtm.sendMessage(reply, message.channel)
-      }else if(message.channel && message.channel.slice(0, 1) === 'D'){ // Answer DMs
+      }else if(message.channel.slice(0, 1) === 'D'){ // Answer DMs
         const reply = rs.reply(message.user, message.text)
         rtm.sendMessage(reply, message.channel)
       }
