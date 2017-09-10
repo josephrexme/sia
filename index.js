@@ -17,7 +17,7 @@ rtm.on(CLIENT_EVENTS.RTM.AUTHENTICATED, (rtmStartData) => {
   for(const c of rtmStartData.channels){
     if(c.is_member && c.name === defaultChannel) { channel = c.id }
   }
-  console.log(`Logged in as ${rtmStartData.self.name} of ${rtmStartData.team.name}, but not connected to channel yet`)
+  console.log(`Logged in as ${rtmStartData.self.name} of ${rtmStartData.team.name}`)
 });
 
 rtm.on(CLIENT_EVENTS.RTM.RTM_CONNECTION_OPENED, () => {
@@ -27,6 +27,9 @@ rtm.on(CLIENT_EVENTS.RTM.RTM_CONNECTION_OPENED, () => {
 rtm.on(CLIENT_EVENTS)
 
 rtm.start()
+
+// const messenger = new AsyncMessenger(rtm)
+// messenger.sendMessage(reply, message.channel)
 
 const reply_commands = (message) => {
   // Take out the command prefix
@@ -40,7 +43,6 @@ const reply_commands = (message) => {
     const reply = rs.reply(message.user, filteredText)
     rtm.sendMessage(reply, message.channel)
   }else{
-    console.log('repl', code);
     rtm.sendMessage(repl[lang](code), message.channel)
   }
 }
@@ -48,7 +50,7 @@ const reply_commands = (message) => {
 rs.loadDirectory('./brain', () => {
   rs.sortReplies()
   rtm.on(RTM_EVENTS.MESSAGE, (message) => {
-    console.log('Message', message)
+    console.log('Message', message) // stdout message for debug
     const commandPrefix = '`'
     if(message.text && message.text.length){
       const nameMatch = /(^|(\s|@))(sia)/i.test(message.text)

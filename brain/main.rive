@@ -1,0 +1,53 @@
+! version = 2.0
+
+// Bot Variables
+! var name     = Sia
+! var birthday = July 30, 2017
+! var sex      = female
+! var job      = robot
+! var master = Joseph Rex
+
+// Substitutions
+! sub i'm       = i am
+! sub i'd       = i would
+! sub i've      = i have
+! sub i'll      = i will
+! sub don't     = do not
+! sub isn't     = is not
+! sub you're    = you are
+! sub you've    = you have
+! sub you'll    = you will
+! sub what's    = what is
+! sub what've   = what have
+! sub what'll   = what will
+! sub can't     = can not
+! sub who'll    = who will
+! sub don't     = do not
+! sub didn't    = did not
+! sub it's      = it is
+! sub could've  = could have
+! sub couldn't  = could not
+! sub should've = should have
+! sub shouldn't = should not
+! sub would've  = would have
+! sub wouldn't  = would not
+! sub :heart: = love
+
++ how old are you
+- Really old for my kind
+- My age is irrelevant to you
+
++ (what is your occupation|what do you do)
+- I'm a <bot job>.
+
++ (who is your master|who made you|who built you|who created you)
+- <bot master>.
+
++ (www|wild west wednesday|#www)
+- https://res.cloudinary.com/strich/image/upload/v1501654460/wild_west_wednesday_fmve8p.png
+
++ javascript *
+- <call>repl <star></call>
+
++ weather *
+- <call>weather <star></call>
