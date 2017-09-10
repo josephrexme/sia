@@ -35,7 +35,7 @@ rs.loadDirectory('./brain', () => {
     const commandPrefix = '`'
     if(message.text && message.text.length){
       const nameMatch = /(^|(\s|@))(sia)/i.test(message.text)
-      if(message.text.slice(0, 1) === commandPrefix){
+      if(message.text.slice(0, 1) === commandPrefix){ // Answer command prefix messages
         // Take out the command prefix
         const filteredText = message.text.slice(1)
         // Take the code ignoring first word as command
@@ -50,8 +50,11 @@ rs.loadDirectory('./brain', () => {
           console.log('repl', code);
           rtm.sendMessage(repl.js(code), message.channel)
         }
-      }else if(nameMatch){
+      }else if(nameMatch){ // Answer name mentions
         const reply = rs.reply(message.user, message.text.replace(/sia/i, ''))
+        rtm.sendMessage(reply, message.channel)
+      }else if(message.channel && message.channel.slice(0, 1) === 'D'){ // Answer DMs
+        const reply = rs.reply(message.user, message.text)
         rtm.sendMessage(reply, message.channel)
       }
     }
