@@ -31,7 +31,7 @@ rtm.start()
 // const messenger = new AsyncMessenger(rtm)
 // messenger.sendMessage(reply, message.channel)
 
-const reply_commands = (message) => {
+const replyCommands = (message) => {
   // Take out the command prefix
   const filteredText = message.text.slice(1)
   // Take the code ignoring first word as command
@@ -63,7 +63,7 @@ rs.loadDirectory('./brain', () => {
     if(message.text && message.text.length){
       const nameMatch = /(^|(\s|@))(sia)/i.test(message.text)
       if(message.text.slice(0, 1) === commandPrefix){ // Answer command prefix messages
-        reply_commands(message)
+        replyCommands(message)
       }else if(nameMatch){ // Answer name mentions
         const reply = rs.reply(message.user, message.text.replace(/sia/i, ''))
         rtm.sendMessage(reply, message.channel)
