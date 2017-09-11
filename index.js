@@ -47,6 +47,14 @@ const reply_commands = (message) => {
   }
 }
 
+rs._objlangs['repl'] = 'javascript'
+rs._handlers.javascript._objects['repl'] = function(rs, args){
+  console.log('args', args)
+  const response = repl.js(args.join(' '))
+  console.log(response)
+  return response
+}
+
 rs.loadDirectory('./brain', () => {
   rs.sortReplies()
   rtm.on(RTM_EVENTS.MESSAGE, (message) => {
