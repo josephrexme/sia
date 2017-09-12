@@ -1,14 +1,13 @@
 const dotenv = require('dotenv').config()
-const Rivescript = require('rivescript')
 const RtmClient = require('@slack/client').RtmClient
 const RTM_EVENTS = require('@slack/client').RTM_EVENTS
 const CLIENT_EVENTS = require('@slack/client').CLIENT_EVENTS
 const repl = require('./lib/repl')
+const AsyncMessenger = require('./lib/asyncMessenger')
 
 const token = process.env.SLACK_BOT_TOKEN || ''
 const defaultChannel = process.env.DEFAULT_CHANNEL || 'general'
 
-const rs = new Rivescript()
 const rtm = new RtmClient(token)
 
 let channel
@@ -28,48 +27,21 @@ rtm.on(CLIENT_EVENTS)
 
 rtm.start()
 
-// const messenger = new AsyncMessenger(rtm)
-// messenger.sendMessage(reply, message.channel)
-
-const replyCommands = (message) => {
-  // Take out the command prefix
-  const filteredText = message.text.slice(1)
-  // Take the code ignoring first word as command
-  const code = filteredText.slice(filteredText.indexOf(' ') + 1)
-  // Assume first word is language being passed to repl
-  const lang = filteredText.split(' ')[0]
-  // If language exists among available repl languages process repl
-  if(Object.keys(repl).indexOf(lang) === -1){
-    const reply = rs.reply(message.user, filteredText)
-    rtm.sendMessage(reply, message.channel)
-  }else{
-    rtm.sendMessage(repl[lang](code), message.channel)
-  }
-}
-
-rs._objlangs['repl'] = 'javascript'
-rs._handlers.javascript._objects['repl'] = function(rs, args){
-  console.log('args', args, args.join(' '))
-  const response = repl.js(args.join(' '))
-  console.log(response)
-  return response
-}
-
-rs.loadDirectory('./brain', () => {
-  rs.sortReplies()
+const messenger = new AsyncMessenger(rtm, {
+  repl: repl.js,
+  weather: require('./lib/weather')
+}, function() {
   rtm.on(RTM_EVENTS.MESSAGE, (message) => {
     console.log('Message', message) // stdout message for debug
     const commandPrefix = '`'
     if(message.text && message.text.length){
       const nameMatch = /(^|(\s|@))(sia)/i.test(message.text)
       if(message.text.slice(0, 1) === commandPrefix){ // Answer command prefix messages
-        replyCommands(message)
+        messenger.replyCommands(message)
       }else if(nameMatch){ // Answer name mentions
-        const reply = rs.reply(message.user, message.text.replace(/sia/i, ''))
-        rtm.sendMessage(reply, message.channel)
+        messenger.sendMessage(message.user, message.text.replace(/sia/i, ''), message.channel)
       }else if(message.channel.slice(0, 1) === 'D'){ // Answer DMs
-        const reply = rs.reply(message.user, message.text)
-        rtm.sendMessage(reply, message.channel)
+        messenger.sendMessage(message.user, message.text, message.channel)
       }
     }
   })
