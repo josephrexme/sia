@@ -33,6 +33,20 @@
 ! sub wouldn't  = would not
 ! sub :heart: = love
 
+// Person substitutions
+! person i am = you are
+! person I am = you are
+! person you are = i am
+! person i'm = you're
+! person I'm = you're
+! person you're = i'm
+! person my = your
+! person your = my
+! person you = I
+! person I = you
+! person mine = yours
+! person yours = mine
+
 + how old are you
 - Really old for my kind
 - My age is irrelevant to you
@@ -42,6 +56,9 @@
 
 + (who is your master|who made you|who built you|who created you)
 - <bot master>.
+
++ say *
+- <person>
 
 + (www|wild west wednesday|#www)
 - https://res.cloudinary.com/strich/image/upload/v1501654460/wild_west_wednesday_fmve8p.png
