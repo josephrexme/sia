@@ -49,7 +49,7 @@ const replyCommands = (message) => {
 
 rs._objlangs['repl'] = 'javascript'
 rs._handlers.javascript._objects['repl'] = function(rs, args){
-  console.log('args', args)
+  console.log('args', args, args.join(' '))
   const response = repl.js(args.join(' '))
   console.log(response)
   return response
