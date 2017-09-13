@@ -1,5 +1,5 @@
 const expect = require('chai').expect
-const weather = require('../lib/weather')
+const weather = require('../lib/wikipedia')
 
 describe('Weather', function() {
   this.timeout(5000)
@@ -22,3 +22,4 @@ describe('Weather', function() {
     }).catch(done)
   })
 })
+
