@@ -29,7 +29,12 @@ rtm.start()
 
 const messenger = new AsyncMessenger(rtm, {
   repl: repl.js,
-  weather: require('./lib/weather')
+  weather: require('./lib/weather'),
+  searchPlaces: require('./lib/places'),
+  searchTwitter: require('./lib/twitter'),
+  searchReddit: require('./lib/reddit'),
+  searchWikipedia: require('./lib/wikipedia'),
+  youtube: require('./lib/youtube')
 }, function() {
   rtm.on(RTM_EVENTS.MESSAGE, (message) => {
     console.log('Message', message) // stdout message for debug
