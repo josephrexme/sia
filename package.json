@@ -10,7 +10,7 @@
     "google-locations": "^0.2.0",
     "querystring": "^0.2.0",
     "request": "^2.81.0",
-    "rivescript": "github:genericallyloud/rivescript-js",
+    "rivescript": "github:josephrexme/rivescript-promises",
     "snoocore": "^3.3.1",
     "twitter": "^1.7.1",
     "vm2": "^3.4.6",
