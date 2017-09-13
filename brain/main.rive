@@ -70,13 +70,13 @@
 - <call>weather <star></call>
 
 + (who is|tell me about|what is) [a|an|the] *
-- <call>searchWikipedia <star></call>
+- <call>searchWikipedia <star2></call>
 
 + how do you feel about *
 - <call>searchTwitter <star></call>
 
 + (what|who|how) do you think [about|of] *
-- <call>searchTwitter <star></call>
+- <call>searchTwitter <star2></call>
 
 + (what|which) is (the worst|your least favorite) *{weight=10}
 - <call>searchReddit worst <star3></call>
