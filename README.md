@@ -1,9 +1,6 @@
 # Sia
-Sia (Sentient Intelligent Autobot) is a bot for slack. Sia uses template based intelligency through [rivescript][1] and was made with [Node-Slack-SDK][2]
-
-### Todos
-- Only require prefix in channels, reply everything in DM
-- Run JavaScript and get results
+[![Build Status](https://travis-ci.org/josephrexme/sia.svg?branch=master)](https://travis-ci.org/josephrexme/sia)
+Sia (Sentient Intelligent Autobot) is an AI bot for slack. Sia currently uses template based intelligence through [rivescript][1] and was made with [Node-Slack-SDK][2].
 
 [1]: https://www.rivescript.com
 [2]: https://github.com/slackapi/node-slack-sdk
