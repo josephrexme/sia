@@ -9,4 +9,10 @@ describe('YouTube', function() {
       done()
     }).catch(done)
   })
+  it('handles empty results gloriously', done => {
+    youtube("mabooloRexcaboolo").then(reply => {
+      expect(reply).to.equal("I couldn't find any video on that")
+      done()
+    }).catch(done)
+  })
 })
