@@ -1,23 +1,27 @@
 const expect = require('chai').expect
-const weather = require('../lib/wikipedia')
+const wikipedia = require('../lib/wikipedia')
 
-describe('Weather', function() {
+const phrase = 'Reactimatron circuit drone'
+
+describe('Wikipedia', function() {
   this.timeout(5000)
-  it('reports object string of weather', (done) => {
-    weather.now('Milwaukee, WI').then((result) => {
+  it('should fetch short info on topic', done => {
+    wikipedia('blackhole').then(result => {
       expect(result).to.be.a('string')
       done()
     }).catch(done)
   })
-  it('is a valid JSON in string', (done) => {
-    weather.now('Cleveland, OH').then((result) => {
-      expect(JSON.parse(result)).to.have.property('humidity')
+
+  it('gives a feedback when no result', done => {
+    wikipedia(phrase).then(result => {
+      expect(result.length).to.be.above(2)
       done()
     }).catch(done)
   })
-  it('is a valid JSON in string', (done) => {
-    weather.forecast('Chicago, IL').then((result) => {
-      expect(JSON.parse(result)).to.have.property('day')
+
+  it('has a detailed feedback for failed cases', done => {
+    wikipedia(phrase).then(result => {
+      expect(result).to.equal(`I don't know much about ${phrase}`)
       done()
     }).catch(done)
   })
