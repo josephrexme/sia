@@ -81,7 +81,7 @@
 + [ ?](who is|tell me about|what is|what do you know about) [a|an|the] *
 - <call>searchWikipedia <star2></call>
 
-+ [ ?][*]ell [*] about [a|an|the] *
++ [ ?](T|t)ell [*] about [a|an|the] *
 - <call>searchWikipedia <star2></call>
 
 + [ ?]how do you feel about *
@@ -96,5 +96,5 @@
 + [ ?](what|which) is (the best|your favorite) *{weight=10}
 - <call>searchReddit best <star3></call>
 
-+ [ ?]show me * [video]
++ [ ?]show [*] * [video]
 - <call>youtube <star></call>
