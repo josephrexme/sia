@@ -1,11 +1,7 @@
 // A generic set of chatting responses. This set mimicks the classic Eliza bot.
 
 + *
-- I'm not sure I understand you fully.
-- Please go on.
-- That is interesting. Please continue.
-- Tell me more about that.
-- Does talking about this bother you?
+- I'm feeling dumb
 
 + [*] (sorry|apologize|apology) [*]
 - Please don't apologize.
@@ -231,16 +227,11 @@
 - Are you sure, no one <star>?
 - Surely someone <star>.
 - Can you think of anyone at all?
-- Are you thinking of a very special person?
-- Who, may I ask?
 - You have a particular person in mind, don't you?
-- Who do you think you are talking about?
 
-+ [*] my (mom|dad|mother|father|bro|brother|sis|sister|cousin|aunt|uncle) *
++ [*] my (mom|daughter|son|dad|mother|father|bro|brother|sis|sister|cousin|aunt|uncle) *
 - Tell me more about your family.
 - Who else in your family <star2>?
-- Your <star>?
-- What else comes to mind when you think of your <star>?
 
 + can you *
 - You believe I can <star> don't you?
@@ -291,11 +282,3 @@
 - Someone special perhaps?
 - You have a particular reason in mind, don't you?
 - Who do you think you're talking about?
-
-+ [*] (fuck|fucker|shit|damn|shut up|bitch) [*]
-- Does it make you feel strong to use that kind of language?
-- Are you venting your feelings now?
-- Are you angry?
-- Does this topic make you feel angry?
-- Is something making you feel angry?
-- Does using that kind of language make you feel better?

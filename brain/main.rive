@@ -81,8 +81,8 @@
 + [ ?](who is|tell me about|what is|what do you know about) [a|an|the] *
 - <call>searchWikipedia <star2></call>
 
-+ [ ?](T|t)ell [*] about [a|an|the] *
-- <call>searchWikipedia <star2></call>
++ [ ?](Tell|tell) [*] about [a|an|the] *
+@ tell me about <star2>
 
 + [ ?]how do you feel about *
 - <call>searchTwitter <star></call>
