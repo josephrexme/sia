@@ -15,4 +15,10 @@ describe('YouTube', function() {
       done()
     }).catch(done)
   })
+  it('ensures valid ids', done => {
+    youtube("michael jackson").then(reply => {
+      expect(reply).to.equal("I couldn't find any video on that")
+      done()
+    }).catch(done)
+  })
 })
