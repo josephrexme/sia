@@ -25,5 +25,12 @@ describe('Wikipedia', function() {
       done()
     }).catch(done)
   })
+
+  it('handles ambiguous topics', done => {
+    wikipedia('TOR').then(result => {
+      expect(result).to.equal('Tor is ambiguous can you be more specific')
+      done()
+    }).catch(done)
+  })
 })
 
