@@ -3,6 +3,12 @@
 + *
 - I'm feeling dumb
 
++ [ ?](hello|hi|hey there|wadup|howdy)
+- Hi friend
+- Hello, what good shall I do this day?
+- Howdy
+- Hey there, you woke me from a nap
+
 + [*] (sorry|apologize|apology) [*]
 - Please don't apologize.
 - Apologies are not necessary.

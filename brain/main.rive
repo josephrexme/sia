@@ -63,8 +63,8 @@
 + [ ?](www|wild west wednesday|#www)
 - https://res.cloudinary.com/strich/image/upload/v1501654460/wild_west_wednesday_fmve8p.png
 
-+ [ ?]javascript *
-- <call>repl <star></call>
++ [ ?](javascript|js|code|compute) *
+- <call>repl <star2></call>
 
 + [ ?]weather *
 - <call>currentWeather <star></call>
