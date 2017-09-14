@@ -82,7 +82,7 @@
 - <call>searchWikipedia <star2></call>
 
 + [ ?](Tell|tell) [*] about [a|an|the] *
-@ tell me about <star2>
+- <call>searchWikipedia <star2></call>
 
 + [ ?]how do you feel about *
 - <call>searchTwitter <star></call>
