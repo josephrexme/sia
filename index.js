@@ -40,15 +40,12 @@ const messenger = new AsyncMessenger(rtm, {
 }, function() {
   rtm.on(RTM_EVENTS.MESSAGE, (message) => {
     console.log('Message', message) // stdout message for debug
-    const commandPrefix = '`'
     if(message.text && message.text.length && !message.thread_ts){ // Reply non-threads
       const nameMatch = /(^|[\s|@])(sia)/i.test(message.text)
-      if(message.text.slice(0, 1) === commandPrefix){ // Answer command prefix messages
-        messenger.replyCommands(message)
-      }else if(nameMatch){ // Answer name mentions
-        messenger.sendMessage(message.user, message.text.replace(/@?sia/i, ''), message.channel)
+      if(nameMatch){ // Answer name mentions
+        messenger.sendMessage(message, message.text.replace(/@?sia/i, ''))
       }else if(message.channel.slice(0, 1) === 'D'){ // Answer DMs
-        messenger.sendMessage(message.user, message.text, message.channel)
+        messenger.sendMessage(message, message.text)
       }
     }
   })
