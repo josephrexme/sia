@@ -18,7 +18,7 @@ describe('YouTube', function() {
   it('falls back for searches that only match channels', done => {
     const searchPhrase = "PhiberOptics"
     youtube(searchPhrase).then(reply => {
-      expect(reply.indexOf(`All ${searchPhrase}'s video`)).to.equal(0)
+      expect(reply.indexOf(`All ${searchPhrase} video`)).to.not.equal(-1)
       done()
     }).catch(done)
   })
