@@ -9,6 +9,7 @@
     "cheerio": "^1.0.0-rc.2",
     "dotenv": "^4.0.0",
     "google-locations": "^0.2.0",
+    "lodash": "^4.17.4",
     "querystring": "^0.2.0",
     "request": "^2.81.0",
     "rivescript": "github:josephrexme/rivescript-promises",

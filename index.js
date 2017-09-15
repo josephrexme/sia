@@ -2,8 +2,6 @@ const dotenv = require('dotenv').config()
 const RtmClient = require('@slack/client').RtmClient
 const RTM_EVENTS = require('@slack/client').RTM_EVENTS
 const CLIENT_EVENTS = require('@slack/client').CLIENT_EVENTS
-const repl = require('./lib/repl')
-const weather = require('./lib/weather')
 const AsyncMessenger = require('./lib/asyncMessenger')
 
 const token = process.env.SLACK_BOT_TOKEN || ''
@@ -29,9 +27,9 @@ rtm.on(CLIENT_EVENTS)
 rtm.start()
 
 const messenger = new AsyncMessenger(rtm, {
-  repl: repl.js,
-  currentWeather: weather.now,
-  forecastWeather: weather.forecast,
+  repl: require('./lib/repl').js,
+  currentWeather: require('./lib/weather').now,
+  forecastWeather: require('./lib/weather').forecast,
   searchPlaces: require('./lib/places'),
   searchTwitter: require('./lib/twitter'),
   // searchReddit: require('./lib/reddit'),

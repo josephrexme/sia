@@ -3,19 +3,13 @@
 + *
 - I'm feeling dumb
 
-+ [ ?](hello|hi|hey there|wadup|howdy)
-- Hi friend
-- Hello, what good shall I do this day?
-- Howdy
-- Hey there, you woke me from a nap
-
 + [*] (sorry|apologize|apology) [*]
 - Please don't apologize.
 - Apologies are not necessary.
 - I've told you that apologies are not required.
 - It did not bother me. Please continue.
 
-+ i remember *
++ [ ?]i remember *
 - Do you often think of <star>?
 - Does thinking of <star> bring anything else to mind?
 - Why do you remember <star> just now?
@@ -23,17 +17,17 @@
 - What is the connection between me and <star>?
 - What else does <star> remind you of?
 
-+ do you remember *
++ [ ?]do you remember *
 - Did you think I would forget <star>?
 - Why do you think I should recall <star> now?
 - What about <star>?
 - You mentioned <star>?
 
-+ you remember *
++ [ ?]you remember *
 - How could I forget <star>?
 - What about <star> should I remember?
 
-+ i forget *
++ [ ?]i forget *
 - Can you think of why you might forget <star>?
 - Why can't you remember <star>?
 - How often do you think of <star>?
@@ -42,7 +36,7 @@
 - Are you generally forgetful?
 - Do you think you are suppressing <star>?
 
-+ did you forget *
++ [ ?]did you forget *
 - Why do you ask?
 - Are you sure you told me?
 - Would it bother you if I forgot <star>?
@@ -75,7 +69,11 @@
 - Don't you know?
 - How likely, would you estimate?
 
-+ (hello|hi|hey|howdy|hola|hai|yo) [*]
++ [ ?](hello|hi|hey|howdy|hola|hai|yo) [*]
+- Hi friend
+- Hello, what good shall I do this day?
+- Howdy
+- Hey there, you woke me from a nap
 - How do you do. Please state your problem.
 - Hi. What seems to be your problem?
 
@@ -87,13 +85,13 @@
 - What about machines worries you?
 - What do you think about machines?
 
-+ am i *
++ [ ?]am i *
 - Do you believe you are <star>?
 - Would you want to be <star>?
 - Do you wish I would tell you you are <star>?
 - What would it mean if you were <star>?
 
-+ are you *
++ [ ?]are you *
 - Are you interested in whether I am <star> or not?
 - Would you prefer if I weren't <star>?
 - Perhaps I am <star> in your fantasies.
@@ -101,7 +99,7 @@
 - Would it matter to you?
 - What if I were <star>?
 
-+ you are *
++ [ ?]you are *
 - What makes you think I am <star>?
 - Does it please you to believe I am <star>?
 - Do you sometimes wish you were <star>?
@@ -129,10 +127,10 @@
 - What would it mean if you were <star>?
 - What does '<star>' suggest to you?
 
-+ i was *
++ [ ?]i was *
 - Were you really?
-- Why do you tell me you were <star> now?
-- Perhaps I already know you were <star>.
+- Why tell me you were <star> now?
+- Perhaps I already knew you were <star>.
 
 + [*] was you *
 - Would you like to believe I was <star>?
@@ -166,37 +164,37 @@
 - But you are not sure you <star2>.
 - Do you really doubt you <star2>
 
-+ i am *
++ [ ?]i am *
 - Is it because you are <star> that you came to me?
 - How long have you been <star>?
 - Do you believe it is normal to be <star>?
 - Do you enjoy being <star>?
 - Do you know anyone else who is <star>?
 
-+ i can not *
++ [ ?]i can not *
 - How do you know that you can't <star>?
 - Have you tried?
 - Perhaps you could <star> now.
 - Do you really want to be able to <star>?
 - What if you could <star>?
 
-+ i do not *
++ [ ?]i do not *
 - Don't you really <star>?
 - Why don't you <star>?
 - Do you wish to be able to <star>?
 - Does that trouble you?
 
-+ i feel *
++ [ ?]i feel *
 - Tell me more about such feelings.
 - Do you often feel <star>?
 - Do you enjoy feeling <star>?
 - Of what does feeling <star> remind you?
 
-+ i * you
-- Perhaps in your fantasies we <star> each other.
-- Do you wish to <star> me?
-- You seem to need to <star> me.
-- Do you <star> anyone else?
++ [ ?](i|I) * you
+- Perhaps in your fantasies we <star2> each other.
+- Do you wish to <star2> me?
+- You seem to need to <star2> me.
+- Do you <star2> anyone else?
 
 + you * me
 - Why do you think I <star> you?
@@ -226,10 +224,10 @@
 - Why not?
 - Why 'no'?
 
-+ no
++ [ ?]no
 @ nope
 
-+ no one *
++ [ ?]no one *
 - Are you sure, no one <star>?
 - Surely someone <star>.
 - Can you think of anyone at all?
@@ -239,17 +237,17 @@
 - Tell me more about your family.
 - Who else in your family <star2>?
 
-+ can you *
++ [ ?]can you *
 - You believe I can <star> don't you?
 - You want me to be able to <star>.
 - Perhaps you would like to be able to <star> yourself.
 
-+ can i *
++ [ ?]can i *
 - Whether or not you can <star> depends on you more than on me.
 - Do you want to be able to <star>?
 - Perhaps you don't want to <star>.
 
-+ (what|who|when|where|how) [*]
++ [ ?](what|who|when|where|how) [*]
 - Why do you ask?
 - Does that question interest you?
 - What is it you really want to know?
@@ -266,19 +264,19 @@
 - Does that reason seem to explain anything else?
 - What other reasons might there be?
 
-+ why do not you *
++ [ ?]why do not you *
 - Do you believe I don't <star>?
 - Perhaps I will <star> in good time.
 - Should you <star> yourself?
 - You want me to <star>?
 
-+ why can not i *
++ [ ?]why can not i *
 - Do you think you should be able to <star>?
 - Do you want to be able to <star>?
 - Do you believe this will help you to <star>?
 - Have you any idea why you can't <star>?
 
-+ everyone *
++ [ ?]everyone *
 - Really, everyone?
 - Surely not everyone.
 - Can you think of anyone in particular?
@@ -288,3 +286,6 @@
 - Someone special perhaps?
 - You have a particular reason in mind, don't you?
 - Who do you think you're talking about?
+
++ [ ?](www|wild west wednesday|#www)
+- https://res.cloudinary.com/strich/image/upload/v1501654460/wild_west_wednesday_fmve8p.png

@@ -51,6 +51,10 @@
 - Really old for my kind
 - My age is irrelevant to you
 
++ [ ?]where do you live
+- I live on a really comfy server
+- I live in the cloud. No kidding
+
 + [ ?](what is your occupation|what do you do)[*]
 - I'm a <bot job>.
 
@@ -59,9 +63,6 @@
 
 + [ ?]say *
 - <person>
-
-+ [ ?](www|wild west wednesday|#www)
-- https://res.cloudinary.com/strich/image/upload/v1501654460/wild_west_wednesday_fmve8p.png
 
 + [ ?](javascript|js|code|compute) *
 - <call>repl <star2></call>
@@ -72,22 +73,16 @@
 + [ ?]forecast *
 - <call>forecastWeather <star></call>
 
-+ [*] weather [be] in * [be] tomorrow{weight=10}
-- <call>forecastWeather <star></call>
-
-+ [*] weather [in] *
-- <call>currentWeather <star></call>
-
-+ [ ?](who is|tell me about|what is|what do you know about) [a|an|the] *
++ [ ?](who is|tell me about|what is|what do you know about) [a|an|the] *{weight=10}
 - <call>searchWikipedia <star2></call>
 
 + [ ?](Tell|tell) [*] about [a|an|the] *
 - <call>searchWikipedia <star2></call>
 
-+ [ ?]how do you feel about *
++ [ ?]how do you feel about *{weight=10}
 - <call>searchTwitter <star></call>
 
-+ [ ?](what|who|how) do you think [about|of] *
++ [ ?](what|who|how) do you think [about|of] *{weight=60}
 - <call>searchTwitter <star2></call>
 
 + [ ?](what|which) is (the worst|your least favorite) *{weight=10}
@@ -95,6 +90,9 @@
 
 + [ ?](what|which) is (the best|your favorite) *{weight=10}
 - <call>searchReddit best <star3></call>
+
++ [ ?]where is *{weight=60}
+- <call>searchPlaces <star></call>
 
 + [ ?]show [*] * [video]
 - <call>youtube <star></call>
