@@ -9,15 +9,15 @@ describe('Weather', function() {
       done()
     }).catch(done)
   })
-  it('is a valid JSON in string', (done) => {
+  it('shows current day humidity', (done) => {
     weather.now('Cleveland, OH').then((result) => {
-      expect(JSON.parse(result)).to.have.property('humidity')
+      expect(result.indexOf('humidity')).to.not.equal(-1)
       done()
     }).catch(done)
   })
-  it('is a valid JSON in string', (done) => {
+  it('shows high and low for forecast', (done) => {
     weather.forecast('Chicago, IL').then((result) => {
-      expect(JSON.parse(result)).to.have.property('day')
+      expect(result.indexOf('low')).to.not.equal(-1)
       done()
     }).catch(done)
   })

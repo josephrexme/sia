@@ -65,7 +65,10 @@
 - <person>
 
 + [ ?](javascript|js|code|compute) *
-- <call>repl <star2></call>
+- <call>jsREPL <star2></call>
+
++ [ ?](ruby|rb) *
+- <call>rbREPL <star2></call>
 
 + [ ?]weather *
 - <call>currentWeather <star></call>

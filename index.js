@@ -27,7 +27,8 @@ rtm.on(CLIENT_EVENTS)
 rtm.start()
 
 const messenger = new AsyncMessenger(rtm, {
-  repl: require('./lib/repl').js,
+  jsREPL: require('./lib/repl').js,
+  rbREPL: require('./lib/repl').rb,
   currentWeather: require('./lib/weather').now,
   forecastWeather: require('./lib/weather').forecast,
   searchPlaces: require('./lib/places'),
