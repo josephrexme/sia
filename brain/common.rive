@@ -1,4 +1,3 @@
-// A generic set of chatting responses. This set mimicks the classic Eliza bot.
 
 + *
 - I'm feeling dumb
@@ -14,6 +13,12 @@
 - Apologies are not necessary.
 - I've told you that apologies are not required.
 - It did not bother me. Please continue.
+
++ [ ?](bye|goodbye) [*]
+- Goodbye to you
+- Farewell human
+- See ya
+- Think about me while you're gone
 
 + [ ?]i remember *
 - Do you often think of <star>?
