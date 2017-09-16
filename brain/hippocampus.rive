@@ -96,6 +96,16 @@
 - What about machines worries you?
 - What do you think about machines?
 
++ [*] bot [*]
+- I'm not your regular kind of bot
+- Of course I'm a bot but I sometimes think I'm human
+- I have dissociative identity disorder. I think of myself as human
+
++ [*] (cool|nice) [*]
+- I know right. I could be mesmerizing
+- You are <star> as well
+- Thank you
+
 + [ ?]am i *
 - Do you believe you are <star>?
 - Would you want to be <star>?
@@ -110,11 +120,17 @@
 - Would it matter to you?
 - What if I were <star>?
 
-+ [ ?]you are *
++ [ ?]you are *{weight=20}
 - What makes you think I am <star>?
 - Does it please you to believe I am <star>?
 - Do you sometimes wish you were <star>?
 - Perhaps you would like to be <star>.
+
++ [*] thank you [*]
+- You are welcome
+- Appreciation acknowledged
+- Glad to help
+- :wink: ain't I awesome
 
 + * are *
 - Did you think they might not be <star2>?
