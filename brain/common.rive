@@ -2,6 +2,12 @@
 
 + *
 - I'm feeling dumb
+- I don't follow
+- You really shouldn't just call my name for no reason
+- I take offense in being called for nothing
+- That's incomprehensive for me
+- Dumb that down please
+- You just disturbed a nap. I take naps too you know
 
 + [*] (sorry|apologize|apology) [*]
 - Please don't apologize.
@@ -190,7 +196,7 @@
 - Do you enjoy feeling <star>?
 - Of what does feeling <star> remind you?
 
-+ [ ?](i|I) * you
++ [ ?](i|I) * you{weight=10}
 - Perhaps in your fantasies we <star2> each other.
 - Do you wish to <star2> me?
 - You seem to need to <star2> me.
