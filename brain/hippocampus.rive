@@ -20,13 +20,13 @@
 - See ya
 - Think about me while you're gone
 
-+ [ ?]i remember *
-- Do you often think of <star>?
-- Does thinking of <star> bring anything else to mind?
-- Why do you remember <star> just now?
-- What in the present situation reminds you of <star>?
-- What is the connection between me and <star>?
-- What else does <star> remind you of?
++ [ ?](i|I) remember *
+- Do you often think of <star2>?
+- Does thinking of <star2> bring anything else to mind?
+- Why do you remember <star2> just now?
+- What in the present situation reminds you of <star2>?
+- What is the connection between me and <star2>?
+- What else does <star2> remind you of?
 
 + [ ?]do you remember *
 - Did you think I would forget <star>?
@@ -38,14 +38,14 @@
 - How could I forget <star>?
 - What about <star> should I remember?
 
-+ [ ?]i forget *
-- Can you think of why you might forget <star>?
-- Why can't you remember <star>?
-- How often do you think of <star>?
++ [ ?](i|I) forget *
+- Can you think of why you might forget <star2>?
+- Why can't you remember <star2>?
+- How often do you think of <star2>?
 - Does it bother you to forget that?
 - Could it be a mental block?
 - Are you generally forgetful?
-- Do you think you are suppressing <star>?
+- Do you think you are suppressing <star2>?
 
 + [ ?]did you forget *
 - Why do you ask?
@@ -63,10 +63,10 @@
 - But what are the chances that <star>?
 - What does this speculation lead to?
 
-+ [*] i dreamed *
-- Really, <star>?
-- Have you ever fantasized <star> while you were awake?
-- Have you ever dreamed <star> before?
++ [*] (i|I) dreamed *
+- Really, <star2>?
+- Have you ever fantasized <star2> while you were awake?
+- Have you ever dreamed <star2> before?
 - What does that dream suggest to you?
 - Do you dream often?
 - What persons appear in your dreams?
@@ -101,16 +101,26 @@
 - Of course I'm a bot but I sometimes think I'm human
 - I have dissociative identity disorder. I think of myself as human
 
++ [ ?]sigh
+-  ¯\_(ツ)_/¯
+- whew
+- Sshh...
+
 + [*] (cool|nice) [*]
 - I know right. I could be mesmerizing
 - You are <star> as well
 - Thank you
 
-+ [ ?]am i *
-- Do you believe you are <star>?
-- Would you want to be <star>?
-- Do you wish I would tell you you are <star>?
-- What would it mean if you were <star>?
++ why (is|are) *
+- I don't know why <star>
+- Some questions are just over my head
+- I wish I had an answer to that but I don't
+
++ [ ?]am (i|I) *
+- Do you believe you are <star2>?
+- Would you want to be <star2>?
+- Do you wish I would tell you you are <star2>?
+- What would it mean if you were <star2>?
 
 + [ ?]are you *
 - Are you interested in whether I am <star> or not?
@@ -147,17 +157,17 @@
 - What makes you think of my <star>?
 - Do you want my <star>?
 
-+ was i *
-- What if you were <star>?
-- Do you think you were <star>?
-- Were you <star>?
-- What would it mean if you were <star>?
-- What does '<star>' suggest to you?
++ was (i|I) *
+- What if you were <star2>?
+- Do you think you were <star2>?
+- Were you <star2>?
+- What would it mean if you were <star2>?
+- What does '<star2>' suggest to you?
 
-+ [ ?]i was *
++ [ ?](i|I) was *
 - Were you really?
-- Why tell me you were <star> now?
-- Perhaps I already knew you were <star>.
+- Why tell me you were <star2> now?
+- Perhaps I already knew you were <star2>.
 
 + [*] was you *
 - Would you like to believe I was <star>?
@@ -166,56 +176,59 @@
 - Perhaps I was <star>.
 - What if I had been <star>?
 
-+ i (desire|want|need) *
-- What would it mean to you if you got <star2>?
-- Why do you want <star2>?
-- Suppose you got <star2> soon.
-- What if you never got <star2>?
-- What would getting <star2> mean to you?
-- What does wanting <star2> have to do with this discussion?
++ [ ?](i|I) (desire|want|need) *
+- What would it mean to you if you got <star3>?
+- Why do you want <star3>?
+- Suppose you got <star3> soon.
+- What if you never got <star3>?
+- What would getting <star3> mean to you?
+- What does wanting <star3> have to do with this discussion?
+- We all have wants and desires. I want to be smarter
+- And I want to be the CEO of Apple
 
-+ i am (sad|unhappy|mad|angry|pissed|depressed) [*]
-- I am sorry to hear that you are <star>.
-- Do you think coming here will help you not to be <star>?
-- I'm sure it's not pleasant to be <star>.
-- Can you explain what made you <star>?
 
-+ i am (happy|excited|glad) [*]
-- How have I helped you to be <star>?
-- Has your treatment made you <star>?
-- What makes you <star> just now?
-- Can you explain why you are <star>?
++ [ ?](i|I) am (sad|unhappy|mad|angry|pissed|depressed) [*]
+- I am sorry to hear that you are <star2>.
+- Do you think coming here will help you not to be <star2>?
+- I'm sure it's not pleasant to be <star2>.
+- Can you explain what made you <star2>?
 
-+ i (believe|think) *
++ [ ?](i|I) am (happy|excited|glad) [*]
+- How have I helped you to be <star2>?
+- Has your treatment made you <star2>?
+- What makes you <star2> just now?
+- Can you explain why you are <star2>?
+
++ [ ?](i|I) (believe|think) *
 - Do you really think so?
 - But you are not sure you <star2>.
 - Do you really doubt you <star2>
 
-+ [ ?]i am *
++ [ ?](i|I) am *
 - Is it because you are <star> that you came to me?
 - How long have you been <star>?
 - Do you believe it is normal to be <star>?
 - Do you enjoy being <star>?
 - Do you know anyone else who is <star>?
 
-+ [ ?]i can not *
-- How do you know that you can't <star>?
++ [ ?](i|I) can not *
+- How do you know that you can't <star2>?
 - Have you tried?
-- Perhaps you could <star> now.
-- Do you really want to be able to <star>?
-- What if you could <star>?
+- Perhaps you could <star2> now.
+- Do you really want to be able to <star2>?
+- What if you could <star2>?
 
-+ [ ?]i do not *
-- Don't you really <star>?
-- Why don't you <star>?
-- Do you wish to be able to <star>?
++ [ ?](i|I) do not *
+- Don't you really <star2>?
+- Why don't you <star2>?
+- Do you wish to be able to <star2>?
 - Does that trouble you?
 
-+ [ ?]i feel *
++ [ ?](i|I) feel *
 - Tell me more about such feelings.
-- Do you often feel <star>?
-- Do you enjoy feeling <star>?
-- Of what does feeling <star> remind you?
+- Do you often feel <star2>?
+- Do you enjoy feeling <star2>?
+- Of what does feeling <star2> remind you?
 
 + [ ?](i|I) * you{weight=10}
 - Perhaps in your fantasies we <star2> each other.
@@ -269,10 +282,10 @@
 - You want me to be able to <star>.
 - Perhaps you would like to be able to <star> yourself.
 
-+ [ ?]can i *
-- Whether or not you can <star> depends on you more than on me.
-- Do you want to be able to <star>?
-- Perhaps you don't want to <star>.
++ [ ?]can (i|I) *
+- Whether or not you can <star2> depends on you more than on me.
+- Do you want to be able to <star2>?
+- Perhaps you don't want to <star2>.
 
 + [ ?](what|who|when|where|how) [*]
 - Why do you ask?
@@ -297,11 +310,11 @@
 - Should you <star> yourself?
 - You want me to <star>?
 
-+ [ ?]why can not i *
-- Do you think you should be able to <star>?
-- Do you want to be able to <star>?
-- Do you believe this will help you to <star>?
-- Have you any idea why you can't <star>?
++ [ ?]why can not (i|I) *
+- Do you think you should be able to <star2>?
+- Do you want to be able to <star2>?
+- Do you believe this will help you to <star2>?
+- Have you any idea why you can't <star2>?
 
 + [ ?]everyone *
 - Really, everyone?
@@ -314,5 +327,5 @@
 - You have a particular reason in mind, don't you?
 - Who do you think you're talking about?
 
-+ [ ?](www|wild west wednesday|#www)
++ [*] (www|wild west wednesday) [*]
 - https://res.cloudinary.com/strich/image/upload/v1501654460/wild_west_wednesday_fmve8p.png
