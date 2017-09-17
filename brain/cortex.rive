@@ -47,20 +47,6 @@
 ! person mine = yours
 ! person yours = mine
 
-+ [ ?]how old are you[*]
-- Really old for my kind
-- My age is irrelevant to you
-
-+ [ ?]where do you live
-- I live on a really comfy server
-- I live in the cloud. No kidding
-
-+ [ ?](what is your occupation|what do you do)[*]
-- I'm a <bot job>.
-
-+ [ ?](who is your master|who made you|who built you|who created you)[*]
-- <bot master>.
-
 + [ ?]say *
 - <person>
 

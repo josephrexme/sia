@@ -8,6 +8,24 @@
 - Dumb that down please
 - You just disturbed a nap. I take naps too you know
 
++ [ ?](how|How) old are you[*]
+- Really old for my kind
+- My age is irrelevant to you
+
++ [ ?](where|Where) do you live
+- I live on a really comfy server
+- I live in the cloud. No kidding
+
++ [ ?](where|Where) are you from
+- Not from a womb for sure
+- I came from nothing but 1s and 0s
+
++ [ ?](what is your occupation|what do you do)[*]
+- I'm a <bot job>.
+
++ [ ?](who is your master|who made you|who built you|who created you)[*]
+- <bot master>.
+
 + [*] (sorry|apologize|apology) [*]
 - Please don't apologize.
 - Apologies are not necessary.
