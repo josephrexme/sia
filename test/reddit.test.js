@@ -1,12 +1,13 @@
 const expect = require('chai').expect
-// const reddit = require('../lib/reddit')
+const reddit = require('../lib/reddit')
 
 describe('Reddit', function() {
-  it('fetches data', () => {
-    // reddit('paul ryan').then(reply => {
-    //   console.log(reply)
-    //   expect(reply).to.not.equal('something')
-    //   done()
-    // }).catch(done)
-  })
+  this.timeout(5000)
+  // it('fetches data', done => {
+  //   reddit('paul ryan').then(reply => {
+  //     console.log(reply)
+  //     expect(reply).to.not.equal('something')
+  //     done()
+  //   }).catch(done)
+  // })
 })

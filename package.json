@@ -5,7 +5,6 @@
     "test": "mocha"
   },
   "dependencies": {
-    "@r/api-client": "^3.37.0",
     "@slack/client": "^3.13.0",
     "cheerio": "^1.0.0-rc.2",
     "dotenv": "^4.0.0",
@@ -14,7 +13,7 @@
     "querystring": "^0.2.0",
     "request": "^2.81.0",
     "rivescript": "github:josephrexme/rivescript-promises",
-    "snoocore": "^3.3.1",
+    "snoowrap": "^1.14.2",
     "superagent": "^3.6.0",
     "twitter": "^1.7.1",
     "vm2": "^3.4.6",
