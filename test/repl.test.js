@@ -41,4 +41,10 @@ describe('REPL', function() {
       expect(reply).to.equal("Unsafe characters found")
     })
   })
+  it('prevents metaprogramming for ruby repl', done => {
+    repl.rb('send').then(reply => {
+      expect(reply).to.equal("Unsafe characters found")
+      done()
+    }).catch(done)
+  })
 })

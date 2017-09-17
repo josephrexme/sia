@@ -10,7 +10,7 @@ This is just some of the features of Sia.
 
 ![conversation with](https://cdn.rawgit.com/josephrexme/sia/7aaa9f8b/data/conversation.jpg)
 
-### LICENSE
+## LICENSE
 Released under [MIT License][3], Copyright (c) 2017 Joseph Rex
 
 See [LICENSE][4] for more information
