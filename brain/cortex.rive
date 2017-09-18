@@ -50,11 +50,8 @@
 + [ ?]say *
 - <person>
 
-+ [ ?](javascript|js|code|compute) *
++ [ ?](javascript|js|code) *
 - <call>jsREPL <star2></call>
-
-+ [ ?](ruby|rb) *
-- <call>rbREPL <star2></call>
 
 + [ ?]weather *
 - <call>currentWeather <star></call>
