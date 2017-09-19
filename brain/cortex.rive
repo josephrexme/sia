@@ -76,3 +76,6 @@
 
 + [ ?]show [*] * [video]
 - <call>youtube <star></call>
+
++ [ ?] (Browser|browser) support [for] *
+- <call>canIuse <star2></call>

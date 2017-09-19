@@ -1,5 +1,6 @@
 # Sia
 [![Build Status](https://travis-ci.org/josephrexme/sia.svg?branch=master)](https://travis-ci.org/josephrexme/sia)
+[![Coverage Status](https://coveralls.io/repos/github/josephrexme/sia/badge.svg?branch=master)](https://coveralls.io/github/josephrexme/sia?branch=master)
 
 <img src="https://cdn.rawgit.com/josephrexme/sia/7aaa9f8b/data/Sia.jpg" alt="Sia" width="250">
 
