@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "node index.js",
-    "version": "2.2.3",
+    "version": "2.2.4",
     "test": "mocha"
   },
   "dependencies": {
@@ -13,7 +13,6 @@
     "querystring": "^0.2.0",
     "request": "^2.81.0",
     "rivescript": "github:josephrexme/rivescript-promises",
-    "snoowrap": "^1.14.2",
     "superagent": "^3.6.0",
     "twitter": "^1.7.1",
     "vm2": "^3.4.6",

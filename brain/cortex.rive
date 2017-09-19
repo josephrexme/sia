@@ -71,12 +71,6 @@
 + [ ?](what|who|how) do you think [about|of] *{weight=60}
 - <call>searchTwitter <star2></call>
 
-+ [ ?](what|which) is (the worst|your least favorite) *{weight=10}
-- <call>searchReddit worst <star3></call>
-
-+ [ ?](what|which) is (the best|your favorite) *{weight=10}
-- <call>searchReddit best <star3></call>
-
 + [ ?]where is *{weight=60}
 - <call>searchPlaces <star></call>
 
