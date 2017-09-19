@@ -2,7 +2,7 @@
   "scripts": {
     "start": "node index.js",
     "version": "2.2.4",
-    "test": "mocha"
+    "test": "nyc mocha"
   },
   "dependencies": {
     "@slack/client": "^3.13.0",
@@ -25,6 +25,7 @@
     "chai": "^4.1.2",
     "coveralls": "^2.13.1",
     "mocha": "^3.5.3",
-    "mocha-lcov-reporter": "^1.3.0"
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^11.2.1"
   }
 }
