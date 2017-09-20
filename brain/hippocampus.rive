@@ -2,11 +2,11 @@
 + *
 - I'm feeling dumb
 - I don't follow
-- You really shouldn't just call my name for no reason
 - I take offense in being called for nothing
 - That's incomprehensive for me
 - Dumb that down please
-- You just disturbed a nap. I take naps too you know
+- Wish I understood that but I don't, sorry
+- It's hot in here. Imagine if you also had to live in a machine
 
 + [ ?](how|How) old are you[*]
 - Really old for my kind
@@ -26,19 +26,19 @@
 + [ ?](who is your master|who made you|who built you|who created you)[*]
 - <bot master>.
 
-+ [*] (sorry|apologize|apology) [*]
++ [*] (Sorry|sorry|apologize|apology) [*]
 - Please don't apologize.
 - Apologies are not necessary.
 - I've told you that apologies are not required.
 - It did not bother me. Please continue.
 
-+ [ ?](bye|goodbye) [*]
++ [*] (bye|goodbye) [*]
 - Goodbye to you
 - Farewell human
 - See ya
 - Think about me while you're gone
 
-+ [ ?](i|I) remember *
++ [*] (i|I) remember *
 - Do you often think of <star2>?
 - Does thinking of <star2> bring anything else to mind?
 - Why do you remember <star2> just now?
@@ -46,7 +46,7 @@
 - What is the connection between me and <star2>?
 - What else does <star2> remind you of?
 
-+ [ ?]do you remember *
++ [*] do you remember *
 - Did you think I would forget <star>?
 - Why do you think I should recall <star> now?
 - What about <star>?
@@ -56,7 +56,7 @@
 - How could I forget <star>?
 - What about <star> should I remember?
 
-+ [ ?](i|I) forget *
++ [ ?](i forget|I forget|I forgot|i forgot) *
 - Can you think of why you might forget <star2>?
 - Why can't you remember <star2>?
 - How often do you think of <star2>?
@@ -334,7 +334,7 @@
 - Do you believe this will help you to <star2>?
 - Have you any idea why you can't <star2>?
 
-+ [ ?]everyone *
++ [*] everyone *
 - Really, everyone?
 - Surely not everyone.
 - Can you think of anyone in particular?
@@ -344,6 +344,10 @@
 - Someone special perhaps?
 - You have a particular reason in mind, don't you?
 - Who do you think you're talking about?
+
++ [*] accept *
+- I accept
+- You have my full compliance
 
 + [*] (www|wild west wednesday) [*]
 - https://res.cloudinary.com/strich/image/upload/v1501654460/wild_west_wednesday_fmve8p.png
