@@ -11,7 +11,7 @@ describe('Conversion', function() {
     expect(convert('45 kg to pound')).to.equal('99.21')
     expect(convert('90 ounce to gram')).to.equal('2551.45')
   })
-  it('rounds floats to to decimal places', () => {
+  it('rounds floats to 2 decimal places', () => {
     expect(convert('160 lb to kg').split('.')[1]).to.have.lengthOf(2)
   })
   it('reports unknown conversion units', () => {
