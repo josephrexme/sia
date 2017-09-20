@@ -2,7 +2,8 @@
 [![Build Status](https://travis-ci.org/josephrexme/sia.svg?branch=master)](https://travis-ci.org/josephrexme/sia)
 [![Coverage Status](https://coveralls.io/repos/github/josephrexme/sia/badge.svg?branch=master)](https://coveralls.io/github/josephrexme/sia?branch=master)
 [![bitHound Code](https://www.bithound.io/github/josephrexme/sia/badges/code.svg)](https://www.bithound.io/github/josephrexme/sia)
-[![Known Vulnerabilities](https://snyk.io/test/github/snyk/goof/badge.svg)](https://snyk.io/test/github/snyk/goof)
+
+<!-- [![Known Vulnerabilities](https://snyk.io/test/github/snyk/goof/badge.svg)](https://snyk.io/test/github/snyk/goof) -->
 
 <img src="https://cdn.rawgit.com/josephrexme/sia/7aaa9f8b/data/Sia.jpg" alt="Sia" width="250">
 

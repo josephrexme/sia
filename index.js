@@ -34,7 +34,8 @@ const messenger = new AsyncMessenger(rtm, {
   searchTwitter: require('./lib/twitter'),
   searchWikipedia: require('./lib/wikipedia'),
   youtube: require('./lib/youtube'),
-  canIuse: require('./lib/caniuse')
+  canIuse: require('./lib/caniuse'),
+  convert: require('./lib/conversion')
 }, function() {
   rtm.on(RTM_EVENTS.MESSAGE, (message) => {
     console.log('Message', message) // stdout message for debug
