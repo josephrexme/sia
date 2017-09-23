@@ -65,6 +65,9 @@
 + [ ?](Tell|tell) [*] about [a|an|the] *
 - <call>searchWikipedia <star2></call>
 
++ [ ?](What doe|what does) * [*]
+- <call>searchWikipedia <star2></call>
+
 + [ ?]how do you feel about *{weight=10}
 - <call>searchTwitter <star></call>
 
