@@ -85,3 +85,9 @@
 
 + [ ?] (Convert|convert) *
 - <call>convert <star2></call>
+
++ [ ?] * [on codepen]{weight=50}
+- <call>codepen <star></call>
+
++ [ ?] codepen *{weight=20}
+- <call>codepen <star></call>
