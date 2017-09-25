@@ -15,6 +15,12 @@ describe('CodePen', function() {
       done()
     }).catch(done)
   })
+  it('fails gracefully for unfound user profiles', done => {
+    codepen('profile of dogshit').then(reply => {
+      expect(reply).to.equal('No profile with that username found')
+      done()
+    }).catch(done)
+  })
   it('gets last pen of a user', done => {
     codepen('last pen of shshaw').then(reply => {
       expect(reply).to.have.string('https://codepen.io/shshaw')
@@ -24,6 +30,12 @@ describe('CodePen', function() {
   it('gets last specified number of pens by a user', done => {
     codepen('last 3 pen of shshaw').then(reply => {
       expect(reply.slice(12, reply.length).split("\n")).to.have.lengthOf(3)
+      done()
+    }).catch(done)
+  })
+  it('fails with feedback for invalid user pens', done => {
+    codepen('last pen of dogshit').then(reply => {
+      expect(reply).to.equal('No profile with that username found')
       done()
     }).catch(done)
   })
