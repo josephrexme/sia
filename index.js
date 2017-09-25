@@ -30,7 +30,7 @@ const messenger = new AsyncMessenger(rtm, {
   searchTwitter: require('./lib/twitter'),
   searchWikipedia: require('./lib/wikipedia'),
   youtube: require('./lib/youtube'),
-  codepen: require('./lib/codepen'),
+  codePen: require('./lib/codepen'),
   canIuse: require('./lib/caniuse'),
   convert: require('./lib/conversion')
 }, function() {
