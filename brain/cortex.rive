@@ -81,7 +81,7 @@
 - <call>youtube <star></call>
 
 + [ ?] * on codepen
-- I should display codepen results
+- <call>codePen <star></call>
 
 + [ ?] (Browser|browser) support [for] *
 - <call>canIuse <star2></call>
