@@ -80,7 +80,7 @@
 + [ ?]show [*] * [video]
 - <call>youtube <star></call>
 
-+ [ ?] * [on codepen]
++ [ ?] * on codepen
 - I should display codepen results
 
 + [ ?] (Browser|browser) support [for] *
