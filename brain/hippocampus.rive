@@ -23,7 +23,7 @@
 + [ ?](what is your occupation|what do you do)[*]
 - I'm a <bot job>.
 
-+ [ ?](who is your master|who made you|who built you|who created you)[*]
++ [*] (who is your master|who made you|who built you|who created you|who developed you)[*]
 - <bot master>.
 
 + [*] (Sorry|sorry|apologize|apology) [*]
