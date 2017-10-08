@@ -47,6 +47,9 @@
 ! person mine = yours
 ! person yours = mine
 
++ *
+- <call>watson <star></call>
+
 + [ ?]say *
 - <person>
 
