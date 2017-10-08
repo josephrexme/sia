@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "node index.js",
-    "version": "2.2.4",
+    "version": "3.0.0",
     "test": "nyc mocha",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
