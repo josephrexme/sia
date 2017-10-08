@@ -9,4 +9,16 @@ describe('Watson', function() {
       done()
     }).catch(done)
   })
+  it('can handle weather response', done => {
+    watson('What is the weather like in Milwaukee').then(reply => {
+      expect(reply).to.match(/It's a .+ in Milwaukee.+/)
+      done()
+    }).catch(done)
+  })
+  it('joins multiple sys-location entities', done => {
+    watson('What is the weather like in Milwaukee, Wisconsin').then(reply => {
+      expect(reply).to.match(/It's a .+ in Milwaukee.+/)
+      done()
+    }).catch(done)
+  })
 })

@@ -56,12 +56,6 @@
 + [ ?](javascript|js|code) *
 - <call>jsREPL <star2></call>
 
-+ [ ?]weather *
-- <call>currentWeather <star></call>
-
-+ [ ?]forecast *
-- <call>forecastWeather <star></call>
-
 + [ ?](who is|tell me about|what is|what do you know about) [a|an|the] *{weight=20}
 - <call>searchWikipedia <star2></call>
 

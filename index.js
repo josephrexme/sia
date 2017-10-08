@@ -24,8 +24,6 @@ rtm.start()
 
 const messenger = new AsyncMessenger(rtm, {
   jsREPL: require('./lib/repl').js,
-  currentWeather: require('./lib/weather').now,
-  forecastWeather: require('./lib/weather').forecast,
   searchPlaces: require('./lib/places'),
   searchTwitter: require('./lib/twitter'),
   searchWikipedia: require('./lib/wikipedia'),
