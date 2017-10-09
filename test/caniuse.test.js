@@ -20,4 +20,11 @@ describe('Can I Use', function() {
       done()
     }).catch(done)
   })
+  it('converts all entries to lowercase', done => {
+    const feature = 'requestIdleCallback'
+    caniuse(feature).then(reply => {
+      expect(reply.slice(13, 32)).to.equal(feature.toLowerCase())
+      done()
+    }).catch(done)
+  })
 })
