@@ -86,6 +86,6 @@
 + [ ?] (Convert|convert) *
 - <call>convert <star2></call>
 
-+ [*] translate * to english
++ [*] translate *
 - <call>translate <star></call>
 
