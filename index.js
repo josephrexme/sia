@@ -31,6 +31,7 @@ const messenger = new AsyncMessenger(rtm, {
   codePen: require('./lib/codepen'),
   canIuse: require('./lib/caniuse'),
   convert: require('./lib/conversion'),
+  translate: require('./lib/translate'),
   watson: require('./lib/watson')
 }, function() {
   rtm.on(RTM_EVENTS.MESSAGE, (message) => {
