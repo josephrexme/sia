@@ -45,4 +45,16 @@ describe('CodePen', function() {
       done()
     }).catch(done)
   })
+  it('replies to unknown codepen queries', done => {
+    codepen('natter to your pen pals').then(reply => {
+      expect(reply).to.equal("I don't know what you mean, ask Chris Coyier")
+      done()
+    }).catch(done)
+  })
+  it('gets most hearted pen', done => {
+    codepen('most hearted pen of shshaw').then(reply => {
+      expect(reply).to.equal(':heart: https://codepen.io/shshaw/pen/gEiDt')
+      done()
+    }).catch(done)
+  })
 })
