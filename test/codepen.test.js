@@ -57,4 +57,10 @@ describe('CodePen', function() {
       done()
     }).catch(done)
   })
+  it('alias most hearted with favorite', done => {
+    codepen('favorite pen of shshaw').then(reply => {
+      expect(reply).to.equal(':heart: https://codepen.io/shshaw/pen/gEiDt')
+      done()
+    }).catch(done)
+  })
 })

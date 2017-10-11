@@ -1,34 +1,3 @@
-
-+ [ ?](how|How) old are you[*]
-- Really old for my kind
-- My age is irrelevant to you
-
-+ [ ?](where|Where) do you live
-- I live on a really comfy server
-- I live in the cloud. No kidding
-
-+ [ ?](where are you from|Where are you from|where do you come from)
-- Not from a womb for sure
-- I came from nothing but 1s and 0s
-
-+ [ ?](what is your occupation|what do you do)[*]
-- I'm a <bot job>.
-
-+ [*] (who is your master|who made you|who built you|who created you|who developed you)[*]
-- <bot master>.
-
-+ [*] (Sorry|sorry|apologize|apology) [*]
-- Please don't apologize.
-- Apologies are not necessary.
-- I've told you that apologies are not required.
-- It did not bother me. Please continue.
-
-+ [*] (bye|goodbye) [*]
-- Goodbye to you
-- Farewell human
-- See ya
-- Think about me while you're gone
-
 + [*] (i|I) remember *
 - Do you often think of <star2>?
 - Does thinking of <star2> bring anything else to mind?
@@ -89,24 +58,6 @@
 - Don't you know?
 - How likely, would you estimate?
 
-+ [*] computer [*]
-- Do computers worry you?
-- Why do you mention computers?
-- What do you think machines have to do with your problem?
-- Don't you think computers can help people?
-- What about machines worries you?
-- What do you think about machines?
-
-+ [*] bot [*]
-- I'm not your regular kind of bot
-- Of course I'm a bot but I sometimes think I'm human
-- I have dissociative identity disorder. I think of myself as human
-
-+ [ ?]sigh
--  ¯\_(ツ)_/¯
-- whew
-- Sshh...
-
 + [*] (cool|nice) [*]
 - I know right. I could be mesmerizing
 - You are <star> as well
@@ -136,12 +87,6 @@
 - Does it please you to believe I am <star>?
 - Do you sometimes wish you were <star>?
 - Perhaps you would like to be <star>.
-
-+ [*] thank you [*]
-- You are welcome
-- Appreciation acknowledged
-- Glad to help
-- :wink: ain't I awesome
 
 + * are *
 - Did you think they might not be <star2>?
@@ -252,31 +197,11 @@
 - You're not really talking about me -- are you?
 - What are your feelings now?
 
-+ [*] (yes|yeah|yep|yup) [*]
-- Hmm okay
-- Please go on.
-- Why don't you tell me a little more about this.
-- I see.
-- I understand.
-
-+ [*] (nope|nah) [*]
-- Are you saying no just to be negative?
-- Does this make you feel unhappy?
-- Why not?
-- Why 'no'?
-
-+ [ ?]no
-@ nope
-
 + [ ?]no one *
 - Are you sure, no one <star>?
 - Surely someone <star>.
 - Can you think of anyone at all?
 - You have a particular person in mind, don't you?
-
-+ [*] my (mom|daughter|son|dad|mother|father|bro|brother|sis|sister|cousin|aunt|uncle) *
-- Tell me more about your family.
-- Who else in your family <star2>?
 
 + [ ?]can you *
 - You believe I can <star> don't you?
@@ -320,19 +245,3 @@
 + [*] accept *
 - I accept
 - You have my full compliance
-
-+ [*] (www|wild west wednesday) [*]
-- https://res.cloudinary.com/strich/image/upload/v1501654460/wild_west_wednesday_fmve8p.png
-
-+ [*] joke [*]
-- What do you call a fake noodle? An impasta
-- I hate jokes about German sausages. They are the wurst
-- What do you call a deer with no eyes? No idea
-- Why can't you have a 12 inch long nose? Because then it'd be a foot
-- What is MATH? Mental Abuse To Humans
-- What is the difference between a snowman and a snowwoman? snowballs
-- What does a buffalo say to his son going to college? Bison
-- Yo mama so ugly, the neighbors got arrested\s
-^ for breaking into her house to close the shades
-- Yo mama so bald you can see whats on her mind
-- Yo mama so bald that she took a shower and got brain-washed.

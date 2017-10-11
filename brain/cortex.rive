@@ -86,6 +86,6 @@
 + [ ?] (Convert|convert) *
 - <call>convert <star2></call>
 
-+ [*] translate *
++ [*] translate *{weight=20}
 - <call>translate <star></call>
 
