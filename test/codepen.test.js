@@ -11,7 +11,7 @@ describe('CodePen', function() {
   })
   it('can get profile data', done => {
     codepen('profile of shshaw').then(reply => {
-      expect(reply).to.match(/Shaw has \d+ followers and a pro account/)
+      expect(reply).to.match(/Shaw has .+ followers and a pro account/)
       done()
     }).catch(done)
   })
