@@ -86,7 +86,7 @@
 + [ ?] (Convert|convert) *
 - <call>convert <star2></call>
 
-+ [*]ratings [for] * [movie]
++ [ ?]movie info [for] * [movie]
 - <call>movies <star></call>
 
 + [*] translate *{weight=20}
