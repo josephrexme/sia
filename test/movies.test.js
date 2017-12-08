@@ -23,7 +23,7 @@ describe('OMDB Movies', function() {
   })
   it('does not break without ratings', done => {
     movies('The biography of Joseph Rex').then(reply => {
-      expect(reply).to.equal('undefined is a undefined undefined. Genre is undefined.')
+      expect(reply).to.equal("Found nothing on that movie. I guess it's not popular or not yet released")
       done()
     }).catch(done)
   })
