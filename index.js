@@ -32,6 +32,7 @@ const messenger = new AsyncMessenger(rtm, {
   canIuse: require('./lib/caniuse'),
   convert: require('./lib/conversion'),
   translate: require('./lib/translate'),
+  mdn: require('./lib/mdn'),
   movies: require('./lib/movies'),
   watson: require('./lib/watson')
 }, function() {
