@@ -15,12 +15,6 @@ describe('OMDB Movies', function() {
       done()
     }).catch(done)
   })
-  it('never displays N/A for plot', done => {
-    movies('Thor Ragnarok documentary').then(reply => {
-      expect(reply).to.not.match(/.+ Here's the plot:\n.+/)
-      done()
-    }).catch(done)
-  })
   it('does not break without ratings', done => {
     movies('The biography of Joseph Rex').then(reply => {
       expect(reply).to.equal("Found nothing on that movie. I guess it's not popular or not yet released")
