@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@google-cloud/translate": "^1.0.0",
-    "@slack/client": "^3.13.0",
+    "@slack/client": "^4.0.0",
     "caniuse-api": "^2.0.0",
     "cheerio": "^1.0.0-rc.2",
     "convert-units": "^2.3.1",
