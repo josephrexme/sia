@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.1
+version: v1.13.5
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -32,3 +32,34 @@ patch:
   'npm:tunnel-agent:20170305':
     - youtube-node > request > tunnel-agent:
         patched: '2018-11-21T06:30:35.408Z'
+  SNYK-JS-LODASH-450202:
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-17T07:25:21.110Z'
+    - snyk > lodash:
+        patched: '2019-07-17T07:25:21.110Z'
+    - cheerio > lodash:
+        patched: '2019-07-17T07:25:21.110Z'
+    - watson-developer-cloud > async > lodash:
+        patched: '2019-07-17T07:25:21.110Z'
+    - snyk > snyk-php-plugin > lodash:
+        patched: '2019-07-17T07:25:21.110Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-17T07:25:21.110Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-07-17T07:25:21.110Z'
+    - '@slack/client > lodash':
+        patched: '2019-07-17T07:25:21.110Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-07-17T07:25:21.110Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-07-17T07:25:21.110Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-07-17T07:25:21.110Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-17T07:25:21.110Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-07-17T07:25:21.110Z'
+    - '@google-cloud/translate > @google-cloud/common > google-auto-auth > async > lodash':
+        patched: '2019-07-17T07:25:21.110Z'
+    - '@google-cloud/translate > @google-cloud/common > split-array-stream > async > lodash':
+        patched: '2019-07-17T07:25:21.110Z'
