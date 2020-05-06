@@ -19,7 +19,7 @@
     "querystring": "^0.2.0",
     "request": "^2.84.0",
     "rivescript": "github:josephrexme/rivescript-promises",
-    "snyk": "^1.124.1",
+    "snyk": "^1.319.0",
     "superagent": "^3.8.1",
     "twitter": "^1.7.1",
     "typeof": "^1.0.0",
